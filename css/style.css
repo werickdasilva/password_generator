@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --color-button: #7CFC00;
+    --backgroud: #343541;
+    --color-text: #E6ECF1;
+    --background-light: #444654;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*::selection  {
+    background: var(--background-light);
+}
+
+*::-moz-selection {
+    background: var(--background-light);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--backgroud);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.container {
+    max-width: 350px;
+    padding: 40px 4px;
+    background: var(--background-light);
+}
+
+main.container > h1 {
+    font-size: 2.2em;
+    padding-block: 10px;
+    font-family: 'Aboreto', sans-serif;
+    text-align: center;
+}
+
+main.container > form.box-generate-password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+form.box-generate-password > label{
+    font-size: 1.2em;
+    text-align: center;
+}
+
+form.box-generate-password > input[type="range"] {
+    margin-block: 10px;
+    --webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+form.box-generate-password > input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--color-text);
+    height: 16px;
+    border-radius: 7px;
+}
+form.box-generate-password > input[type="range"]::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    --webkit-appearance: none;
+    appearance: none;
+    background: var(--background-light);
+    border-radius: 50%;
+}
+
+form.box-generate-password > input[type="range"]::-webkit-slider-thumb :hover {
+    box-shadow: 0 0 6px var(--backgroud);
+}
+
+form.box-generate-password > button {
+    border: 1px solid var(--color-text);
+    border-radius: 5px;
+    background: transparent;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    width: 65%;
+    color: var(--color-text);
+    transition: background .2s, color .3s, cursor .2s;
+}
+
+form.box-generate-password > button:hover {
+    border: 1px solid var(--background-light);
+    background: var(--color-text);
+    color: var(--backgroud);
+    cursor: pointer;
+}
+
+.show-password {
+    margin-top: 15px;
+    border: 1px solid var(--color-text);
+    border-radius: 3px;
+    width: 90%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.done {
+    border: 1px solid var(--color-button);
+}
+.done > span {
+    color: var(--color-button);
+}
+
+.hide {
+    display: none;
+}

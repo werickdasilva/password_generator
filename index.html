@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <meta name="keywords" content="password generator, create password">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Password Generator</h1>
+
+        <form class="box-generate-password" id="box-generate-password">
+            <label for="slider-counter" id="slider-value"></label>
+            <input type="range" min="5" max="25"  id="slider-counter" value="15">
+            <button>Generate Password</button>
+        </div>
+
+        <div class="show-password hide" id="generated-password">
+            <span id="password"></span>
+            <span class="material-symbols-outlined btn-copy" id="icon-copy">
+                content_copy
+            </span>
+        </div>
+    </main>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
